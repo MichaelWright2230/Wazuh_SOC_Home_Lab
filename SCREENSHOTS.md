@@ -1,8 +1,6 @@
 ## Screenshot evidence index
 
-**How to finish the README:** Create a folder named `screenshots/` in this repository. Upload each of your original screenshots, preferably renamed to `01.png`, `02.png`, … `40.png`. Replace each **[SCREENSHOT PLACEHOLDER]** line above with Markdown such as `![Both agents connected](screenshots/14.png)`. This avoids broken image links until the files are uploaded.
-
-| # | Suggested name | What it shows |
+| # | name | What it shows |
 |---|---|---|
 | 01 | `01.png` | Ubuntu VM installation |
 | 02 | `02.png` | SSH to Wazuh server |
@@ -45,5 +43,3 @@
 | 39 | `39.png` | firewall-drop available response |
 | 40 | `40.png` | SSH failures, detection and response |
 
-
-**Note:** The screenshots are not uploaded to this GitHub repository yet. These filenames are a mapping guide; the image placeholders will only render once the actual files are added to `screenshots/` and linked in Markdown.
