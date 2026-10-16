@@ -1,4 +1,4 @@
-# Wazuh SOC Home Lab — Threat Detection & Automated Incident Response
+<img width="1914" height="737" alt="36  triggering the alert create in wazuh" src="https://github.com/user-attachments/assets/cf811342-3849-4ebd-b313-84f873a9c6d5" /># Wazuh SOC Home Lab — Threat Detection & Automated Incident Response
 
 I built this SOC home lab to practise monitoring Windows and Linux endpoints using **Wazuh**, investigating security events and building my own detection rules. I used VMware virtual machines, an Ubuntu Wazuh server, Windows 10 with Sysmon and an Ubuntu endpoint. I also tested file integrity monitoring and an automated response to repeated SSH login failures.
 
@@ -9,7 +9,7 @@ This lab follows **MyDFIR's Build a SOC Lab with Wazuh** tutorial, adapted to th
 - **[Step-by-step lab guide](step-by-step-lab-guide.md)** — full setup, agent enrolment, archives, Sysmon, detections, dashboard, file integrity and active response.
 - [Investigation report](investigation-report.md) — what I tested, evidence, analyst interpretation and limitations.
 - [Lab architecture](architecture.md) — diagram, network, component roles and how the logs move.
-- [Screenshot guide](SCREENSHOT-GUIDE.md) — every screenshot (01–40), recommended filenames and where to put them.
+- [Screenshots](SCREENSHOT.md) — every screenshot (01–40)
 
 ## Lab setup
 
@@ -68,13 +68,14 @@ For configurations, searches and explanations see the [full step-by-step guide](
 | Repeated SSH failures | Custom rule `100101` | Correlated failure alert displayed |
 | Firewall response | `firewall-drop` | Wazuh reported a host-block active-response event |
 
-**[SCREENSHOT PLACEHOLDER — 30: Completed SOC monitoring dashboard]**
+<img width="1916" height="1032" alt="30 creation of a dashboard" src="https://github.com/user-attachments/assets/487c8919-bd46-4ce7-8122-cc919a4e70f2" />
 
-**[SCREENSHOT PLACEHOLDER — 32: File modification event]**
+<img width="1918" height="1035" alt="32  creating an event by trigering the new rule" src="https://github.com/user-attachments/assets/a599daa9-58d0-4d23-b149-811549e9d5c9" />
 
-**[SCREENSHOT PLACEHOLDER — 36: Guest account alert]**
+<img width="1914" height="737" alt="36  triggering the alert create in wazuh" src="https://github.com/user-attachments/assets/bf0e31e6-ab26-4406-b7bf-fe047b53944e" />
 
-**[SCREENSHOT PLACEHOLDER — 40: SSH failure detection and firewall-drop response]**
+<img width="1910" height="1032" alt="40  new rule(firwall) blocked the user afetr multiple failed attempt to login on wazuh" src="https://github.com/user-attachments/assets/e154132c-f563-46da-b522-9478a85debc8" />
+
 
 ## Alert validation
 
