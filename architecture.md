@@ -35,9 +35,9 @@ Wazuh agents forward telemetry from the endpoints to the central Wazuh deploymen
 
 **Evidence:** [01 — Ubuntu VM](#screenshot-evidence-index), [02 — SSH access](#screenshot-evidence-index), [03 — Wazuh installation](#screenshot-evidence-index), [04 — initial dashboard](#screenshot-evidence-index), [12–15 — agent connections](#screenshot-evidence-index).
 
-**[SCREENSHOT PLACEHOLDER — 04: First successful login to the Wazuh dashboard]**  
-**[SCREENSHOT PLACEHOLDER — 14: Wazuh showing Windows and Linux agents connected]**
+<img width="1917" height="1039" alt="4 first login to wazuh" src="https://github.com/user-attachments/assets/704e5539-415c-4cac-a189-46961dac09a8" />
 
+<img width="1913" height="696" alt="14  wazuh viw of agent connection with linux and windows machine" src="https://github.com/user-attachments/assets/8c44d434-819c-4017-bef0-168d7c022ee1" />
 
 ## How events travelled through the lab
 
@@ -55,12 +55,12 @@ These are private lab IPs, not public-facing addresses. Connectivity uses the vi
 
 ## Architecture screenshots
 
-**[SCREENSHOT PLACEHOLDER — 01: Ubuntu installation]**
+<img width="1916" height="1035" alt="1 installed ubuntu and named it wazah" src="https://github.com/user-attachments/assets/4e385c50-8263-42ce-80e0-bd9ff14c7ded" />
 
-**[SCREENSHOT PLACEHOLDER — 02: SSH connection to Wazuh server]**
+<img width="1110" height="624" alt="2 sshing into wazah server" src="https://github.com/user-attachments/assets/2a2a8685-4fc7-4d5b-8c4b-f19e909f0134" />
 
-**[SCREENSHOT PLACEHOLDER — 04: Wazuh dashboard]**
+<img width="1916" height="1032" alt="30 creation of a dashboard" src="https://github.com/user-attachments/assets/22e89778-047a-4d7f-9c6b-cfe6c17a58c9" />
 
-**[SCREENSHOT PLACEHOLDER — 14: Windows and Linux agents]**
+<img width="1913" height="696" alt="14  wazuh viw of agent connection with linux and windows machine" src="https://github.com/user-attachments/assets/158b2aff-0e0b-40ab-80ef-51c81bba65f7" />
 
 See [SCREENSHOT-GUIDE.md](SCREENSHOT-GUIDE.md) for all 40 filenames.
