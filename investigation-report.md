@@ -25,7 +25,17 @@ I completed several small security investigations in a controlled environment to
 
 **Assessment:** Account-management telemetry was present, but the occurrence of an Event ID alone isn't proof of suspicious intent. I would check the acting account, target account, source system and whether an approved change existed.
 
-**[SCREENSHOT PLACEHOLDER — 21–26: Account changes and event searches]**
+<img width="578" height="846" alt="21 createing events on windows (creating, editing and deleting users)" src="https://github.com/user-attachments/assets/26e21d95-eb3d-441f-a7d9-28f1a069070f" />
+
+<img width="1919" height="1034" alt="22 viewing events from  windows (creating, editing and deleting users) on wazuh" src="https://github.com/user-attachments/assets/3a82f383-34f8-498e-bded-df45efb13532" />
+
+<img width="1512" height="882" alt="23  exploring infomation into the traffic i created" src="https://github.com/user-attachments/assets/95a2bd4a-048f-420c-9c40-4c6135c771ed" />
+
+<img width="1918" height="1037" alt="24  creting a search for a new user creation" src="https://github.com/user-attachments/assets/d018540c-98ec-4205-893d-268ad235f261" />
+
+<img width="1916" height="1031" alt="25  creting a search for a user added to a secuirty local group" src="https://github.com/user-attachments/assets/82a33f25-f338-4435-ac8a-5981e1a64b13" />
+
+<img width="1915" height="1029" alt="26  creting a search for user logons" src="https://github.com/user-attachments/assets/a87b777e-225f-480c-9583-b6520c3a2bc7" />
 
 ## 2. Invalid Windows logons
 
@@ -37,7 +47,9 @@ I completed several small security investigations in a controlled environment to
 
 **Assessment:** The returned logs show invalid attempts but do not by themselves establish a real brute-force attack or a compromised account. I would pivot by username, source IP, host and time.
 
-**[SCREENSHOT PLACEHOLDER — 27–28: Failed attempts and search]**
+<img width="1110" height="622" alt="27  creating fake logon attempts traffic" src="https://github.com/user-attachments/assets/aeaa8b6e-a3a8-4c14-9724-0ecbe6e5898d" />
+
+<img width="1916" height="1028" alt="28  searching for fakeuser logon attempts" src="https://github.com/user-attachments/assets/cf7a5000-9a48-4a08-8716-8dd9fac6c5bf" />
 
 ## 3. File integrity event
 
@@ -49,7 +61,9 @@ I completed several small security investigations in a controlled environment to
 
 **Assessment:** This demonstrates detection of a changed file, not who made the change or whether it was unauthorised. A SOC analyst would inspect user/session context and the contents or hash difference.
 
-**[SCREENSHOT PLACEHOLDER — 31–32: Configuration and detected modification]**
+<img width="1710" height="937" alt="31 creating comsum rule for a file companydata file i made" src="https://github.com/user-attachments/assets/623b537e-844a-4f44-a63c-27d0976c3df1" />
+
+<img width="1918" height="1035" alt="32  creating an event by trigering the new rule" src="https://github.com/user-attachments/assets/7eb89420-54ea-4671-ab53-0b3ea07cb37f" />
 
 ## 4. Linux integrity monitoring
 
@@ -61,7 +75,9 @@ I completed several small security investigations in a controlled environment to
 
 **Assessment:** Confirming baseline file state and the exact monitored path is an important next step before this could be trusted as a production file-change alert.
 
-**[SCREENSHOT PLACEHOLDER — 33–34: Linux file integrity]**
+<img width="778" height="852" alt="33  creating an new rule on ubuntu for a file intergrity" src="https://github.com/user-attachments/assets/e091e23d-922e-4958-b8c1-0679773997c7" />
+
+<img width="1917" height="1033" alt="34  triggeriing new lunix rule and view on wazuh" src="https://github.com/user-attachments/assets/4f5f9275-c934-4266-baeb-df2fa4bc137d" />
 
 ## 5. Windows Guest account custom alert
 
@@ -73,7 +89,9 @@ I completed several small security investigations in a controlled environment to
 
 **Assessment:** Alert successfully generated in the lab. Before using it elsewhere, I would validate the parent rule and expected account names, and tune the response to account for approved administrative actions.
 
-**[SCREENSHOT PLACEHOLDER — 35–36: Guest rule and its alert]**
+<img width="834" height="806" alt="35  new created rule in wazuh about the guess account" src="https://github.com/user-attachments/assets/24df007a-c1eb-4375-9848-b1d204ea66a9" />
+
+<img width="1914" height="737" alt="36  triggering the alert create in wazuh" src="https://github.com/user-attachments/assets/db1879b3-32e3-448b-b920-1ded60db544b" />
 
 ## 6. SSH brute-force style authentication activity and response
 
@@ -87,7 +105,13 @@ I completed several small security investigations in a controlled environment to
 
 **Assessment:** Both the correlation alert and active-response event are visible. The Wazuh view is good evidence of the detection/response pipeline. A command-level firewall inspection and repeat connectivity test would be needed to independently verify the actual packet block and duration.
 
-**[SCREENSHOT PLACEHOLDER — 37–40: Rule, active response and Wazuh result]**
+<img width="824" height="985" alt="37  created a rule which will detect multiple failed ssh failures" src="https://github.com/user-attachments/assets/10973a10-7452-4e53-bc31-e5e998f944b3" />
+
+<img width="315" height="113" alt="38  created a rule which will act when the detection of multiple failed ssh failures" src="https://github.com/user-attachments/assets/832f0161-612b-49e5-819f-8ba406f938d9" />
+
+<img width="774" height="311" alt="39  viewing the control" src="https://github.com/user-attachments/assets/2546175f-980d-4e74-bd3c-4505003aa6bb" />
+
+<img width="1910" height="1032" alt="40  new rule(firwall) blocked the user afetr multiple failed attempt to login on wazuh" src="https://github.com/user-attachments/assets/7d3cf67d-b944-4f20-bf35-0a7c86de9839" />
 
 ## MITRE ATT&CK and SOC skills
 
