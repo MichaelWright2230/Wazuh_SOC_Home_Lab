@@ -33,13 +33,13 @@ flowchart TB
 
 Wazuh agents forward telemetry from the endpoints to the central Wazuh deployment. On the Windows system, Sysmon gives extra host activity visibility alongside regular Windows event logs. On the Linux system, SSH and file events supplied useful detection data. The server processes events into searchable records and alerts.
 
-**Evidence:** [01 — Ubuntu VM](#screenshot-evidence-index), [02 — SSH access](#screenshot-evidence-index), [03 — Wazuh installation](#screenshot-evidence-index), [04 — initial dashboard](#screenshot-evidence-index), [12–15 — agent connections](#screenshot-evidence-index).
+**Evidence:** [01 — Ubuntu VM](#architecture-screenshots), [02 — SSH access](#architecture-screenshots), [03 — Wazuh installation](SCREENSHOT-GUIDE.md), [04 — initial dashboard](#lab-architecture), [12–15 — agent connections](step-by-step-lab-guide.md#connecting-the-windows-and-linux-agents).
 
 <img width="1917" height="1039" alt="4 first login to wazuh" src="https://github.com/user-attachments/assets/704e5539-415c-4cac-a189-46961dac09a8" />
 
-<img width="1913" height="696" alt="14  wazuh viw of agent connection with linux and windows machine" src="https://github.com/user-attachments/assets/8c44d434-819c-4017-bef0-168d7c022ee1" />
+*Figure 04: Opened the Wazuh web dashboard for the first time to confirm access.*<img width="1913" height="696" alt="14  wazuh viw of agent connection with linux and windows machine" src="https://github.com/user-attachments/assets/8c44d434-819c-4017-bef0-168d7c022ee1" />
 
-## How events travelled through the lab
+*Figure 14: Verified that both my Windows and Ubuntu agents were visible in Wazuh.*## How events travelled through the lab
 
 1. **Windows VM (192.168.128.132):** Windows Security and Sysmon logs are collected by the agent. It also monitors the test `C:\CompanyData` folder.
 2. **Ubuntu VM (192.168.128.133):** The Wazuh agent provides endpoint log and file-monitoring coverage, including Linux security activity.
@@ -57,10 +57,10 @@ These are private lab IPs, not public-facing addresses. Connectivity uses the vi
 
 <img width="1916" height="1035" alt="1 installed ubuntu and named it wazah" src="https://github.com/user-attachments/assets/4e385c50-8263-42ce-80e0-bd9ff14c7ded" />
 
-<img width="1110" height="624" alt="2 sshing into wazah server" src="https://github.com/user-attachments/assets/2a2a8685-4fc7-4d5b-8c4b-f19e909f0134" />
+*Figure 01: Installed the Ubuntu virtual machine that I used to host the Wazuh server.*<img width="1110" height="624" alt="2 sshing into wazah server" src="https://github.com/user-attachments/assets/2a2a8685-4fc7-4d5b-8c4b-f19e909f0134" />
 
-<img width="1916" height="1032" alt="30 creation of a dashboard" src="https://github.com/user-attachments/assets/22e89778-047a-4d7f-9c6b-cfe6c17a58c9" />
+*Figure 02: Connected to the Ubuntu Wazuh server over SSH to manage the installation.*<img width="1916" height="1032" alt="30 creation of a dashboard" src="https://github.com/user-attachments/assets/22e89778-047a-4d7f-9c6b-cfe6c17a58c9" />
 
-<img width="1913" height="696" alt="14  wazuh viw of agent connection with linux and windows machine" src="https://github.com/user-attachments/assets/158b2aff-0e0b-40ab-80ef-51c81bba65f7" />
+*Figure 30: Finished the dashboard with views for Windows logon failures, account changes and Linux SSH failures.*<img width="1913" height="696" alt="14  wazuh viw of agent connection with linux and windows machine" src="https://github.com/user-attachments/assets/158b2aff-0e0b-40ab-80ef-51c81bba65f7" />
 
-See [SCREENSHOT-GUIDE.md](SCREENSHOT-GUIDE.md) for all 40 filenames.
+*Figure 14: Verified that both my Windows and Ubuntu agents were visible in Wazuh.*See [SCREENSHOT-GUIDE.md](SCREENSHOT-GUIDE.md) for all 40 filenames.
