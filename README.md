@@ -1,4 +1,6 @@
-<img width="1914" height="737" alt="36  triggering the alert create in wazuh" src="https://github.com/user-attachments/assets/cf811342-3849-4ebd-b313-84f873a9c6d5" /># Wazuh SOC Home Lab — Threat Detection & Automated Incident Response
+<img width="1914" height="737" alt="36  triggering the alert create in wazuh" src="https://github.com/user-attachments/assets/cf811342-3849-4ebd-b313-84f873a9c6d5" />
+
+*Figure 36: Triggered the Guest-account detection and confirmed the custom alert appeared in Discover.*# Wazuh SOC Home Lab — Threat Detection & Automated Incident Response
 
 I built this SOC home lab to practise monitoring Windows and Linux endpoints using **Wazuh**, investigating security events and building my own detection rules. I used VMware virtual machines, an Ubuntu Wazuh server, Windows 10 with Sysmon and an Ubuntu endpoint. I also tested file integrity monitoring and an automated response to repeated SSH login failures.
 
@@ -9,7 +11,7 @@ This lab follows **MyDFIR's Build a SOC Lab with Wazuh** tutorial, adapted to th
 - **[Step-by-step lab guide](step-by-step-lab-guide.md)** — full setup, agent enrolment, archives, Sysmon, detections, dashboard, file integrity and active response.
 - [Investigation report](investigation-report.md) — what I tested, evidence, analyst interpretation and limitations.
 - [Lab architecture](architecture.md) — diagram, network, component roles and how the logs move.
-- [Screenshots](SCREENSHOT.md) — every screenshot (01–40)
+- [Screenshot captions and guide](SCREENSHOT-GUIDE.md) — every screenshot (01–40)
 
 ## Lab setup
 
@@ -40,7 +42,7 @@ flowchart LR
 
 See [architecture.md](architecture.md) for more detail, including what each component does and how telemetry is collected.
 
-**[SCREENSHOT PLACEHOLDER — 14: Windows and Linux agents connected]**
+*See Figure 14 in the [architecture guide](architecture.md) for the connected agents.*
 
 ## What I did
 
@@ -70,14 +72,13 @@ For configurations, searches and explanations see the [full step-by-step guide](
 
 <img width="1916" height="1032" alt="30 creation of a dashboard" src="https://github.com/user-attachments/assets/487c8919-bd46-4ce7-8122-cc919a4e70f2" />
 
-<img width="1918" height="1035" alt="32  creating an event by trigering the new rule" src="https://github.com/user-attachments/assets/a599daa9-58d0-4d23-b149-811549e9d5c9" />
+*Figure 30: Finished the dashboard with views for Windows logon failures, account changes and Linux SSH failures.*<img width="1918" height="1035" alt="32  creating an event by trigering the new rule" src="https://github.com/user-attachments/assets/a599daa9-58d0-4d23-b149-811549e9d5c9" />
 
-<img width="1914" height="737" alt="36  triggering the alert create in wazuh" src="https://github.com/user-attachments/assets/bf0e31e6-ab26-4406-b7bf-fe047b53944e" />
+*Figure 32: Modified payroll.txt and observed a Wazuh file integrity alert reporting that the checksum changed.*<img width="1914" height="737" alt="36  triggering the alert create in wazuh" src="https://github.com/user-attachments/assets/bf0e31e6-ab26-4406-b7bf-fe047b53944e" />
 
-<img width="1910" height="1032" alt="40  new rule(firwall) blocked the user afetr multiple failed attempt to login on wazuh" src="https://github.com/user-attachments/assets/e154132c-f563-46da-b522-9478a85debc8" />
+*Figure 36: Triggered the Guest-account detection and confirmed the custom alert appeared in Discover.*<img width="1910" height="1032" alt="40  new rule(firwall) blocked the user afetr multiple failed attempt to login on wazuh" src="https://github.com/user-attachments/assets/e154132c-f563-46da-b522-9478a85debc8" />
 
-
-## Alert validation
+*Figure 40: Generated repeated failed SSH attempts and viewed the correlation alert followed by Wazuh reporting a firewall-drop response. This shows the response was invoked, but not an independent packet-level block test.*## Alert validation
 
 I tested my custom rules rather than stopping at configuration. The Guest-account detection produced an alert in Discover. The SSH test generated both the repeated-authentication-failure alert and an active-response event reporting `firewall-drop`.
 
