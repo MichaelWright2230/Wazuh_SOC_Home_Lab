@@ -25,8 +25,19 @@ After changing manager configuration, restart the relevant service and verify ev
 
 **Evidence:** 05–11 (archive configuration), 22–28 (searching archived Windows events).
 
-**[SCREENSHOT PLACEHOLDER — 05–11: Archive configuration, file edits and verification]**
+<img width="1392" height="656" alt="5 config archives part1" src="https://github.com/user-attachments/assets/55a9c348-7294-4343-9013-bcf767250ebc" />
 
+<img width="873" height="953" alt="6 config archives part2" src="https://github.com/user-attachments/assets/49789ad3-0a7b-41a0-9922-01a1af00d6bc" />
+
+<img width="680" height="288" alt="7 config archives part3" src="https://github.com/user-attachments/assets/2a7b38cb-dd99-4115-8fdc-639af6118dd1" />
+
+<img width="657" height="887" alt="8 config archives part4" src="https://github.com/user-attachments/assets/6466b8d5-0a38-4b33-83ad-f065f8d1d693" />
+
+<img width="1919" height="1030" alt="9 config archives part5" src="https://github.com/user-attachments/assets/f2ccafb1-729f-480e-afb0-483ef176547f" />
+
+<img width="1916" height="1029" alt="10 config archives part6" src="https://github.com/user-attachments/assets/748bb8e2-38ed-4fe9-9a48-76b8365d414b" />
+
+<img width="1918" height="1038" alt="11 config archives part7" src="https://github.com/user-attachments/assets/da8e7d1f-9da9-44b6-b823-8d6f35a5c260" />
 
 ## Connecting the Windows and Linux agents
 
@@ -36,9 +47,13 @@ I used the Wazuh agent views to check connectivity and identify the endpoints be
 
 **Result:** My screenshots show both Windows and Linux agent connections in Wazuh.
 
-**[SCREENSHOT PLACEHOLDER — 12: Windows agent setup]**  
-**[SCREENSHOT PLACEHOLDER — 13–15: Windows and Linux agents visible in Wazuh]**
+<img width="1717" height="948" alt="12 connected to wazuh as a agent with windows 10" src="https://github.com/user-attachments/assets/67904fa2-846c-48c9-9d01-fb97b504889c" />
 
+<img width="1916" height="656" alt="13  wazuh viw of agent connection" src="https://github.com/user-attachments/assets/5db40f6e-324e-4039-bcab-1bf23f3b2663" />
+
+<img width="1913" height="696" alt="14  wazuh viw of agent connection with linux and windows machine" src="https://github.com/user-attachments/assets/7b1c355e-881d-4746-982a-186f2bd28570" />
+
+<img width="1915" height="1027" alt="15  agent connection in wazuh" src="https://github.com/user-attachments/assets/d277d608-b9b3-4097-874c-c9c3a4fa70ab" />
 
 ## Windows Sysmon integration
 
@@ -57,10 +72,15 @@ After the agent configuration was applied, I checked Wazuh to verify Sysmon-rela
 
 **Result:** Sysmon telemetry appeared in Wazuh and I was able to inspect the expanded event information.
 
-**[SCREENSHOT PLACEHOLDER — 16: Sysmon download]**  
-**[SCREENSHOT PLACEHOLDER — 17: Agent ossec.conf changes]**  
-**[SCREENSHOT PLACEHOLDER — 18–20: Sysmon events visible in Wazuh]**
+<img width="1699" height="934" alt="16  downloaded sysmon" src="https://github.com/user-attachments/assets/7a03966a-13cf-415d-8490-60b444917653" />
 
+<img width="1719" height="898" alt="17 config the ossec conf to accept sysmon" src="https://github.com/user-attachments/assets/462de781-61a8-4905-bd2d-ee4c5001053d" />
+
+<img width="1917" height="1034" alt="18  sysmon working on wazuh" src="https://github.com/user-attachments/assets/b0f9cc01-7fe1-4d07-971f-3f0efa327ebf" />
+
+<img width="1918" height="1030" alt="19  sysmon working on wazuh expanded" src="https://github.com/user-attachments/assets/0e71e8c1-5e09-4005-9b34-31afed430efd" />
+
+<img width="1911" height="1033" alt="20  sysmon working for winows and linux in wazuh" src="https://github.com/user-attachments/assets/547904ed-ed7c-4ca2-bc0c-e793a72f5de8" />
 
 ## Windows account activity investigation
 
@@ -83,9 +103,17 @@ Some important Windows Security Event IDs used for this kind of analysis are:
 
 Event IDs provide leads, not proof of malicious activity by themselves. I checked the time, target username, host and other event fields to understand each result.
 
-**[SCREENSHOT PLACEHOLDER — 21: Generating Windows account changes]**  
-**[SCREENSHOT PLACEHOLDER — 22–23: Account event results and expanded event detail]**  
-**[SCREENSHOT PLACEHOLDER — 24–26: Saved-style searches for account creation, group changes and logons]**
+<img width="578" height="846" alt="21 createing events on windows (creating, editing and deleting users)" src="https://github.com/user-attachments/assets/780e4aa7-9186-420f-a95d-dcd08e0fc262" />
+
+<img width="1919" height="1034" alt="22 viewing events from  windows (creating, editing and deleting users) on wazuh" src="https://github.com/user-attachments/assets/24d599ea-29a2-4a80-a565-9a2ef5469a61" />
+
+<img width="1512" height="882" alt="23  exploring infomation into the traffic i created" src="https://github.com/user-attachments/assets/07cfa537-8f74-433e-a6e3-b36595a84b06" />
+
+<img width="1918" height="1037" alt="24  creting a search for a new user creation" src="https://github.com/user-attachments/assets/ee1f1a4d-e969-4242-bec9-e906ccf096fa" />
+
+<img width="1916" height="1031" alt="25  creting a search for a user added to a secuirty local group" src="https://github.com/user-attachments/assets/bf1f96be-ef74-4ad0-b8c2-fd068da67314" />
+
+<img width="1915" height="1029" alt="26  creting a search for user logons" src="https://github.com/user-attachments/assets/260ea13d-a751-4da3-81d2-3ecb6b0a158c" />
 
 ### Failed Windows logon test
 
@@ -93,9 +121,9 @@ I also made deliberate invalid sign-in attempts against my test Windows environm
 
 **Result:** The archive search returned events matching `fakeuser`. The dashboard also contains a failed Windows logon metric.
 
-**[SCREENSHOT PLACEHOLDER — 27: Producing invalid Windows logons]**  
-**[SCREENSHOT PLACEHOLDER — 28: Searching for fakeuser and reviewing the returned events]**
+<img width="1110" height="622" alt="27  creating fake logon attempts traffic" src="https://github.com/user-attachments/assets/b8883fa9-5fec-4c93-89ca-db1c1548c789" />
 
+<img width="1916" height="1028" alt="28  searching for fakeuser logon attempts" src="https://github.com/user-attachments/assets/e53d4b46-c10f-47a0-8ff8-bb62d136cc65" />
 
 ## SOC monitoring dashboard
 
@@ -105,9 +133,9 @@ This brought multiple investigations into one place and helped me see authentica
 
 **Result shown in my screenshots:** The dashboard displays a failed-Windows-logon metric of **3** for the selected time range, a Windows account-change timeline and Linux SSH-related entries. That number is a captured snapshot, not a fixed lab total.
 
-**[SCREENSHOT PLACEHOLDER — 29: Starting the dashboard visualisations]**  
-**[SCREENSHOT PLACEHOLDER — 30: Completed MYDFIR dashboard]**
+<img width="1915" height="1039" alt="29  creating a dash board" src="https://github.com/user-attachments/assets/b7d886e8-175a-4aea-9a93-b715e95262e7" />
 
+<img width="1916" height="1032" alt="30 creation of a dashboard" src="https://github.com/user-attachments/assets/0cc87b04-44d4-479b-9353-558da9a8d54c" />
 
 ## File integrity monitoring (FIM)
 
@@ -131,15 +159,17 @@ I then edited a file and looked for the change in Wazuh. The FIM event view show
 
 This demonstrated that the system could identify an alteration to a watched file, rather than just collect login events.
 
-**[SCREENSHOT PLACEHOLDER — 31: Windows FIM configuration for C:\CompanyData]**  
-**[SCREENSHOT PLACEHOLDER — 32: Wazuh showing payroll.txt modified]**
+<img width="1710" height="937" alt="31 creating comsum rule for a file companydata file i made" src="https://github.com/user-attachments/assets/c05b66a6-8157-4d9c-a328-442b910bb374" />
+
+<img width="1918" height="1035" alt="32  creating an event by trigering the new rule" src="https://github.com/user-attachments/assets/2a594083-b340-406d-ba6c-28d3fb40d8ef" />
 
 ### Linux FIM
 
 I also configured Linux directories for integrity monitoring, including a test path under `/opt/soc-lab`. The configuration screenshot includes real-time monitoring settings. I generated test file changes and used Wazuh to investigate the resulting events.
 
-**[SCREENSHOT PLACEHOLDER — 33: Linux syscheck configuration]**  
-**[SCREENSHOT PLACEHOLDER — 34: Triggered Linux file event and Wazuh view]**
+<img width="778" height="852" alt="33  creating an new rule on ubuntu for a file intergrity" src="https://github.com/user-attachments/assets/22d96609-a2d9-4de3-a656-c429fbc9fff5" />
+
+<img width="1917" height="1033" alt="34  triggeriing new lunix rule and view on wazuh" src="https://github.com/user-attachments/assets/0b76ad56-1f33-4e7c-a060-9d1eb8631d88" />
 
 > FIM tells an analyst that a monitored file changed. It does **not** automatically establish that the change was malicious. Further investigation would be required.
 
@@ -180,8 +210,9 @@ The custom alert description follows the tutorial naming visible in my screensho
 
 **Result:** The Discover screenshot includes the new custom Guest-account alert as well as a related account-enabled event. This shows the custom rule was firing in my lab.
 
-**[SCREENSHOT PLACEHOLDER — 35: Guest-account custom detection rule]**  
-**[SCREENSHOT PLACEHOLDER — 36: Custom Guest-account alert in Discover]**
+<img width="834" height="806" alt="35  new created rule in wazuh about the guess account" src="https://github.com/user-attachments/assets/3b85a951-f3fc-4244-af9e-7419f190af95" />
+
+<img width="1914" height="737" alt="36  triggering the alert create in wazuh" src="https://github.com/user-attachments/assets/4e560e02-376e-4710-b25b-dcbab38a2c2b" />
 
 ### Rule 100101 — Multiple SSH login failures
 
@@ -212,8 +243,7 @@ This checks for repeated failure activity within a short time window. A few fail
 
 **Result:** My Discover screen includes the rule description **Multiple SSH login failures observed from the same source IP** and individual SSH authentication failures.
 
-**[SCREENSHOT PLACEHOLDER — 37: Rule 100101 in local_rules.xml]**
-
+<img width="824" height="985" alt="37  created a rule which will detect multiple failed ssh failures" src="https://github.com/user-attachments/assets/fcc1823b-1b30-4135-b75c-fd155f885a8c" />
 
 ## Automated incident response — firewall-drop
 
@@ -240,9 +270,12 @@ I generated multiple unsuccessful SSH login attempts from my lab system, and che
 
 **Observed result:** The Wazuh alerts show that the automated response was invoked. I did not capture a separate packet-level connectivity test or firewall ruleset output proving the block duration, so I am careful not to claim that as independently verified.
 
-**[SCREENSHOT PLACEHOLDER — 38: Active-response configuration]**  
-**[SCREENSHOT PLACEHOLDER — 39: firewall-drop command available]**  
-**[SCREENSHOT PLACEHOLDER — 40: SSH failures, custom detection and firewall-drop active-response alert]**
+<img width="315" height="113" alt="38  created a rule which will act when the detection of multiple failed ssh failures" src="https://github.com/user-attachments/assets/eef73c74-84f2-40cd-9d06-f65e32272f24" />
+
+<img width="774" height="311" alt="39  viewing the control" src="https://github.com/user-attachments/assets/dc2738ed-709b-4335-b2ab-cf1f46320f31" />
+
+<img width="1910" height="1032" alt="40  new rule(firwall) blocked the user afetr multiple failed attempt to login on wazuh" src="https://github.com/user-attachments/assets/2fae784e-4e94-4dab-af00-210a826397df" />
+
 
 > **Safety:** Active response can disconnect legitimate clients or administrators. Test against non-essential systems and define exclusions, expiry and recovery procedures before deploying similar rules outside a lab.
 
